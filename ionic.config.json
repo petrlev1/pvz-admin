@@ -1,0 +1,8 @@
+{
+  "name": "pvzAdmin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b51a5903"
+}
