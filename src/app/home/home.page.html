@@ -1,25 +1,160 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Inbox
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" color="primary">
 
-<ion-content [fullscreen]="true">
-  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
+
+
+
+
+
+
+
+  <div class="card-toolbar-partner" color="secondary">
+    <div class="card-toolbar-partner-title">Предложения от партнеров</div>
+
+    <div class="card-toolbar-partner-right">
+    <ion-buttons slot="primary">
+      <ion-button fill="solid" shape="round" color="dark">
+        <p>Сначала новые</p>
+        <ion-icon name="caret-down-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="solid" shape="round" color="dark">
+        <p>Категория</p>
+        <ion-icon name="caret-down-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="solid" shape="round" color="dark">
+        <p>Партнер</p>
+        <ion-icon name="caret-down-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  </div>
+
+
+
+
+  <div class="ion-card-container1">
+
   
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">
-        Inbox
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-list>
-    <app-message *ngFor="let message of getMessages()" [message]="message"></app-message>
-  </ion-list>
+  <ion-card color="secondary">
+    <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
+    <ion-card-header>  
+      <ion-card-title>Кресло офисное Бюрократ CH-808LT черный 3C11</ion-card-title>
+      <ion-card-subtitle>ЯндексМаркет</ion-card-subtitle>  
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+          <div>
+          Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг.
+          </div>
+          <div class="ion-card-price"><span style="font-size: 14px; text-decoration: line-through">8000р.</span><span>8000р.</span></div>
+      </ion-text>
+      <div class="ion-card-footer">
+        <div class="ion-card-footer-date">12.04.24</div>
+        <ion-button fill="clear" shape="round" color="light" class="ion-card-footer-more">Подробнее</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
+    <ion-card-header>  
+      <ion-card-title>Кресло офисное Бюрократ CH-808LT черный 3C11</ion-card-title>
+      <ion-card-subtitle>ЯндексМаркет</ion-card-subtitle>  
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+          <div>
+          Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг.
+          </div>
+          <div class="ion-card-price"><span style="font-size: 14px; text-decoration: line-through">8000р.</span><span>8000р.</span></div>
+      </ion-text>
+      <div class="ion-card-footer">
+        <div class="ion-card-footer-date">12.04.24</div>
+        <ion-button fill="clear" shape="round" color="light" class="ion-card-footer-more">Подробнее</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
+    <ion-card-header>  
+      <ion-card-title>Кресло офисное Бюрократ CH-808LT черный 3C11</ion-card-title>
+      <ion-card-subtitle>ЯндексМаркет</ion-card-subtitle>  
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+          <div>
+          Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг.
+          </div>
+          <div class="ion-card-price"><span style="font-size: 14px; text-decoration: line-through">8000р.</span><span>8000р.</span></div>
+      </ion-text>
+      <div class="ion-card-footer">
+        <div class="ion-card-footer-date">12.04.24</div>
+        <ion-button fill="clear" shape="round" color="light" class="ion-card-footer-more">Подробнее</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
+    <ion-card-header>  
+      <ion-card-title>Кресло офисное Бюрократ CH-808LT черный 3C11</ion-card-title>
+      <ion-card-subtitle>ЯндексМаркет</ion-card-subtitle>  
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+          <div>
+          Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг.
+          </div>
+          <div class="ion-card-price"><span style="font-size: 14px; text-decoration: line-through">8000р.</span><span>8000р.</span></div>
+      </ion-text>
+      <div class="ion-card-footer">
+        <div class="ion-card-footer-date">12.04.24</div>
+        <ion-button fill="clear" shape="round" color="light" class="ion-card-footer-more">Подробнее</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
+    <ion-card-header>  
+      <ion-card-title>Кресло офисное Бюрократ CH-808LT черный 3C11</ion-card-title>
+      <ion-card-subtitle>ЯндексМаркет</ion-card-subtitle>  
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+          <div>
+          Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг.
+          </div>
+          <div class="ion-card-price"><span style="font-size: 14px; text-decoration: line-through">8000р.</span><span>8000р.</span></div>
+      </ion-text>
+      <div class="ion-card-footer">
+        <div class="ion-card-footer-date">12.04.24</div>
+        <ion-button fill="clear" shape="round" color="light" class="ion-card-footer-more">Подробнее</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="secondary">
+    <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
+    <ion-card-header>  
+      <ion-card-title>Кресло офисное Бюрократ CH-808LT черный 3C11</ion-card-title>
+      <ion-card-subtitle>ЯндексМаркет</ion-card-subtitle>  
+      </ion-card-header>
+    <ion-card-content>
+      <ion-text>
+          <div>
+          Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг.
+          </div>
+          <div class="ion-card-price"><span style="font-size: 14px; text-decoration: line-through">8000р.</span><span>8000р.</span></div>
+      </ion-text>
+      <div class="ion-card-footer">
+        <div class="ion-card-footer-date">12.04.24</div>
+        <ion-button fill="clear" shape="round" color="light" class="ion-card-footer-more">Подробнее</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</div>
+
 </ion-content>

@@ -1,0 +1,29 @@
+//@import "./global.scss";
+
+
+
+.card-toolbar-partner { position: relative; margin: 20px 20px; background-color: #5C5B75; padding: 20px; border-radius: 20px; }
+.card-toolbar-partner-title { font-size: 20px; padding: 10px 0; font-weight: bold; }
+.card-toolbar-partner-right { position: absolute; right: 20px; top: 19px; }
+.card-toolbar-partner-right ion-button { margin: 0 5px;}
+.card-toolbar-partner-right ion-button p { font-size: 12px; padding: 0 15px; }
+
+
+
+.ion-card-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top center;
+  justify-content: space-around;
+  //justify-content: space-between;
+}
+
+ion-card { border-radius: 20px; width: 345px; }
+
+ion-card-subtitle { font-weight: bold; }
+.card-img img { width: 100%; overflow: hidden; }
+.ion-card-footer { position: relative; padding: 10px 0 0 0; }
+.ion-card-footer-date { position: relative; left: 0; top:0; }
+.ion-card-footer-more { position: absolute; right: -10px; bottom: -10px; font-size: 12px; }
+.ion-card-price { position: relative; font-size: 16px; margin: 8px 0 0 0; }
+.ion-card-price span { margin-right: 10px; }
