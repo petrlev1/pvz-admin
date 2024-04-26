@@ -22,4 +22,35 @@ export class HomePage {
   getMessages(): Message[] {
     return this.data.getMessages();
   }
+
+  isModalOpen = false;
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
+
+
+
+
+
+  public alertButtons = [
+    {
+      text: 'Отменить',
+      role: 'cancel',
+      handler: () => {
+        console.log('Alert canceled');
+      },
+    },
+    {
+      text: 'Удалить',
+      role: 'confirm',
+      handler: () => {
+        console.log('Alert confirmed');
+      },
+    },
+  ];
+
+
+
+  
 }

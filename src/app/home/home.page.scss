@@ -27,3 +27,16 @@ ion-card-subtitle { font-weight: bold; }
 .ion-card-footer-more { position: absolute; right: -10px; bottom: -10px; font-size: 12px; }
 .ion-card-price { position: relative; font-size: 16px; margin: 8px 0 0 0; }
 .ion-card-price span { margin-right: 10px; }
+.ion-card-top-icons { position: absolute; top: 5px; right: 10px; }
+
+ion-modal { --border-radius: 5px;}
+ion-modal ion-toolbar {
+  --background: #4B506F;
+  --color: white;
+}
+
+.modal_edit { background-color: #fff; }
+.modal_edit ion-input { color: black; }
+.modal_edit ion-textarea { color: black; height: 150px; }
+.modal_edit_h2 { font-size: 14px; color: #4B506F; margin: 10px 0 0 0; }
+.modal_edit_img img { max-height: 200px;}
