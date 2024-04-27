@@ -35,12 +35,72 @@
   <ion-card color="secondary">
 
     <div class="ion-card-top-icons">
-    <ion-button size="small" color="light" (click)="setOpen(true)">
-      <ion-icon slot="icon-only" ios="logo-apple" md="create-outline"></ion-icon>
-    </ion-button>
-    <ion-button size="small" color="danger" id="present-alert">
-      <ion-icon slot="icon-only" ios="logo-apple" md="trash-outline"></ion-icon>
-    </ion-button>
+      <ion-button size="small" color="light" id="popover-button"><ion-icon slot="icon-only" ios="logo-apple" md="create-outline"></ion-icon></ion-button>
+      <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item [button]="true" [detail]="false" (click)="editOpen(true)">Редактировать</ion-item>
+              <ion-item [button]="true" [detail]="false" (click)="alertOpen(true)">Удалить</ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+
+
+      <!-- Окно. Редактирование -->
+<ion-modal 
+[isOpen]="isModalOpen"
+(didDismiss)="editOpen(false)"
+>
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Редактирование</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="editOpen(false)">Отменить</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div class="modal_edit">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="modal_edit_img"><img src="./assets/img/stul.jpg" /></div>
+              <div><ion-button size="small">Загрузить изображение</ion-button></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="modal_edit_h2">Заголовок</div>
+              <ion-input label="Кресло офисное Бюрократ CH-808LT черный 3C11" label-placement="floating" fill="solid" placeholder="Заголовок"></ion-input>
+              <div class="modal_edit_h2">Описание</div>
+              <ion-textarea label="Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг." labelPlacement="floating" fill="solid" placeholder="Описание"></ion-textarea>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button>Сохранить</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- Окно предупреждение. Удаление -->
+<ion-alert
+[isOpen]="isAlertOpen"
+header="Вы точно хотите удалить карточку?"
+[buttons]="alertButtons2"
+(didDismiss)="alertOpen(false)"
+></ion-alert>
+
+
+    
+
     </div>
 
     <div class="card-img"><img src="./assets/img/stul.jpg" /></div>
@@ -167,55 +227,3 @@
 
 
 </ion-content>
-
-
-
-<!-- Модальное окно -->
-<ion-modal [isOpen]="isModalOpen">
-  <ng-template>
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Редактирование</ion-title>
-        <ion-buttons slot="end">
-          <ion-button (click)="setOpen(false)">Отменить</ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      
-      <div class="modal_edit">
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <div class="modal_edit_img"><img src="./assets/img/stul.jpg" /></div>
-              <div><ion-button size="small">Загрузить изображение</ion-button></div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <div class="modal_edit_h2">Заголовок</div>
-              <ion-input label="Кресло офисное Бюрократ CH-808LT черный 3C11" label-placement="floating" fill="solid" placeholder="Заголовок"></ion-input>
-              <div class="modal_edit_h2">Описание</div>
-              <ion-textarea label="Компьютерное кресло руководителя Бюрократ CH-808LT представляет собой удобное и практичное кресло, которое позволяет выдерживать нагрузку до 120 кг." labelPlacement="floating" fill="solid" placeholder="Описание"></ion-textarea>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <ion-button>Сохранить</ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </div>
-      
-    </ion-content>
-  </ng-template>
-</ion-modal>
-
-
-
-<!-- Окно предупреждение -->
-<ion-alert
-  trigger="present-alert"
-  header="Вы точно хотите удалить карточку?"
-  [buttons]="alertButtons"
-></ion-alert>

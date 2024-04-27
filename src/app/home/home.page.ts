@@ -13,27 +13,18 @@ export class HomePage {
   private data = inject(DataService);
   constructor() {}
 
-  refresh(ev: any) {
-    setTimeout(() => {
-      (ev as RefresherCustomEvent).detail.complete();
-    }, 3000);
-  }
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
-  }
-
+//Окно. Редактирование
   isModalOpen = false;
-
-  setOpen(isOpen: boolean) {
+  editOpen(isOpen: boolean) {
     this.isModalOpen = isOpen;
   }
 
+  
 
-
-
-
-  public alertButtons = [
+  //Окно предупреждение. Удаление
+  isAlertOpen = false;
+  alertButtons2 = [
     {
       text: 'Отменить',
       role: 'cancel',
@@ -49,6 +40,30 @@ export class HomePage {
       },
     },
   ];
+  alertOpen(isOpen: boolean) {
+    this.isAlertOpen = isOpen;
+  }
+
+
+
+
+
+/*   public alertButtons = [
+    {
+      text: 'Отменить',
+      role: 'cancel',
+      handler: () => {
+        console.log('Alert canceled');
+      },
+    },
+    {
+      text: 'Удалить',
+      role: 'confirm',
+      handler: () => {
+        console.log('Alert confirmed');
+      },
+    },
+  ]; */
 
 
 
