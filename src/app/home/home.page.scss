@@ -1,12 +1,33 @@
 //@import "./global.scss";
 
 
+ion-select {
+  display: inline-block;
+  --placeholder-color: hsla(0, 0%, 100%, 0.7);
+  --background: #6F6D86;
+  --placeholder-opacity: 1;
+  justify-content: center;
+  width: auto;
+}
+ion-select::part(text) {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+ion-select::part(icon) {
+  color: hsla(0, 0%, 100%, 0.7);
+  opacity: 1;
+}
 
-.card-toolbar-partner { position: relative; margin: 20px 20px; background-color: #5C5B75; padding: 20px; border-radius: 20px; }
+.content1 { position: relative; margin: 20px 20px; padding: 20px; border-radius: 20px; }
+
+.actTarif span { margin: 0 10px 0 0; }
+
+.card-toolbar-partner { position: relative; margin: 20px 20px; padding: 20px; border-radius: 20px; background-color: #5C5B75; }
 .card-toolbar-partner-title { font-size: 20px; padding: 10px 0; font-weight: bold; }
-.card-toolbar-partner-right { position: absolute; right: 20px; top: 19px; }
+
+.card-toolbar-partner-right { position: absolute; right: 20px; top: 14px; }
 .card-toolbar-partner-right ion-button { margin: 0 5px;}
 .card-toolbar-partner-right ion-button p { font-size: 12px; padding: 0 15px; }
+.card-toolbar-partner-right ion-select { margin: 0 5px 0 5px;}
 
 
 
@@ -19,7 +40,7 @@
 }
 
 ion-card { border-radius: 20px; width: 345px; }
-
+ion-card-title { cursor: pointer ;}
 ion-card-subtitle { font-weight: bold; }
 .card-img img { width: 100%; overflow: hidden; }
 .ion-card-footer { position: relative; padding: 10px 0 0 0; }
@@ -40,3 +61,5 @@ ion-modal ion-toolbar {
 .modal_edit ion-textarea { color: black; height: 150px; }
 .modal_edit_h2 { font-size: 14px; color: #4B506F; margin: 10px 0 0 0; }
 .modal_edit_img img { max-height: 200px;}
+
+.rightFixButton { position: fixed; right: 40px; bottom: 30px; }

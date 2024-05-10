@@ -14,6 +14,21 @@ export class HomePage {
   constructor() {}
 
 
+
+//Окно. Описание товара/услуги
+isModalDetail = false;
+modalDetail(isOpen: boolean) {
+  this.isModalDetail = isOpen;
+}
+
+
+//Окно. Добавление товара/услуги
+isModalAdd = false;
+modalAdd(isOpen: boolean) {
+  this.isModalAdd = isOpen;
+}
+
+
 //Окно. Редактирование
   isModalOpen = false;
   editOpen(isOpen: boolean) {
